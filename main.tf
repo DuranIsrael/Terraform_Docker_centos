@@ -62,7 +62,7 @@ module "ecs-fargate" {
 
 resource "aws_subnet" "subnet_1" {
   vpc_id            = aws_vpc.wk_20.id
-  cidr_block        = "10.0.1.0/24"
+  cidr_block        = var.subnet_1
   availability_zone = "us-east-1a"
 
   tags = {
@@ -72,7 +72,7 @@ resource "aws_subnet" "subnet_1" {
 
 resource "aws_subnet" "subnet_2" {
   vpc_id            = aws_vpc.wk_20.id
-  cidr_block        = "10.0.2.0/24"
+  cidr_block        = var.subnet_2
   availability_zone = "us-east-1a"
 
 
